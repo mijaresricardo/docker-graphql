@@ -26,7 +26,15 @@ jobs:
         echo "Iniciando login"
         echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
         echo "Fin del login"
-      
+    
+    - name: Build Docker Image 
+      run: |
+        docker build -t ricardomijares/docker-graphql:0.0.1 .   
+
+    - name: Build Push Image 
+      run: |
+        docker push -t ricardomijares/docker-graphql:0.0.1 .   
+
 
     # - uses: actions/checkout@v4
     # - name: Build the Docker image
