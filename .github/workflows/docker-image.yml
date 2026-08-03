@@ -33,7 +33,7 @@ jobs:
 
     - name: Build Push Image 
       run: |
-        docker push -t ricardomijares/docker-graphql:0.0.1 .   
+        docker push -t ricardomijares/docker-graphql:0.0.1   
 
 
     # - uses: actions/checkout@v4
